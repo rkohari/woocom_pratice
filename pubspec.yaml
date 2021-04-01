@@ -26,6 +26,7 @@ dev_dependencies:
   woocommerce: ^0.9.7
   logger: any
   get: any
+  razorpay_flutter: any
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
