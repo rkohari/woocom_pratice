@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:aaa/helpers/package_imports.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
@@ -9,8 +11,11 @@ class WooComInit {
   final consumer_secret = "cs_2605527ed70743f4de342df0f8e2304b30a41918";
   WooCommerce woocommerce;
   Razorpay razorpay;
+  var authToken;
 
   initWooCom() {
+     authToken =base64.encode(utf8.encode(consumer_key + ":" + consumer_secret));
+
     razorpay = Razorpay();
     woocommerce = WooCommerce(
 
@@ -18,8 +23,8 @@ class WooComInit {
       consumerKey: consumer_key,
       consumerSecret: consumer_secret,
       isDebug: true,
-   //
 
+   //
     );
 
     razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, _handlePaymentSuccess);

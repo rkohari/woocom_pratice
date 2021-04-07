@@ -12,8 +12,8 @@ class ProductDetailsPage extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.add_shopping_cart),
             onPressed: () async {
-            //  await CartServices.listAllProductsInCart();
-              await CartServices.loginCustomer();
+              //  await CartServices.listAllProductsInCart();
+
             },
             color: Colors.white,
           )
@@ -41,7 +41,7 @@ class ProductDetailsPage extends StatelessWidget {
         onTap: () async {
           var options = {
             'key': 'rzp_test_bPCHR7ux6VjRK6',
-            'amount': 200*100,
+            'amount': 200 * 100,
             'name': 'Potato Chip',
             'description': 'cool Potato chips packet',
             // 'prefill': {
@@ -49,21 +49,20 @@ class ProductDetailsPage extends StatelessWidget {
             //   'email': 'test@razorpay.com'
             // }
           };
-         // WooComInit.wooComInit.razorpay.open(options);
-
-
+          WooComInit.wooComInit.razorpay.open(options);
 
           print("Add to cart button is pressed");
-          CartServices.addToCart(wooProduct.id.toString(), 2.toString());
-        //  CartServices.createCustomer();
+          //  CartServices.addToCart(wooProduct.id.toString(), 2.toString());
+          //  CartServices.createCustomer();
         },
         child: Container(
           height: 60,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white54,
-              border: Border.all(color: Colors.black12)),
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.white54,
+            border: Border.all(color: Colors.black12),
+          ),
           child: Text(
             "Pay Now",
             style: TextStyle(

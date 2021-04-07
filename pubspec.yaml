@@ -14,7 +14,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  woosignal: ^1.5.1+1
+  woocommerce: any
+  logger: any
+  get: any
+  razorpay_flutter: any
+  wp_json_api: ^2.0.0
+  dio: any
+  http: any
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -23,10 +30,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  woocommerce: ^0.9.7
-  logger: any
-  get: any
-  razorpay_flutter: any
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

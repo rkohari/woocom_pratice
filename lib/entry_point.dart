@@ -1,9 +1,11 @@
-import 'package:aaa/helpers/bindings.dart';
+
 import 'package:aaa/helpers/package_imports.dart';
-import 'package:aaa/screens/home_screen.dart';
 
 
-void main() {
+
+void main() async{
+ await  WPJsonAPI.instance.initWith(baseUrl: "https://woocom.vgts.tech");
+ WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: LoginScreen(),
       initialBinding: Injection()
     );
   }
